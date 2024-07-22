@@ -10,8 +10,7 @@ This project provides an opportunity for me to be creative and get to know the C
 
 This program was developed using the installed version of dotnet on my Windows PC (8.0.303), and VSCode with the C# Dev Kit extensions installed, using the C# programming language. 
 
-I used the System library to provide console output.
-
+I used the System library to provide console output, with a JSON file storing the text for the game.
 
 # Useful Websites
 
