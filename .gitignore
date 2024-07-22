@@ -1,0 +1,5 @@
+#ignore the build output directories and the .csproj file
+bin/
+obj/
+
+*.csproj
