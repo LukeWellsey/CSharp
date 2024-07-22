@@ -1,3 +1,41 @@
 {
-    "intro": "\nTitle: The Lost Temple Adventure\nTo play, type the ALLCAPS word that represents your decision for each prompt.\n\nYou find yourself standing at the entrance to a mysterious temple deep in the jungle. You have heard stories of treasure hidden within its walls, but also of deadly traps and curses that protect it. Will you brave the temple's dangers in search of riches, or turn back before it's too late?"
+    "intro": "\nTitle: The Lost Temple Adventure\nTo play, type the ALLCAPS word that represents your decision for each prompt.\n\nYou find yourself standing at the entrance to a mysterious temple deep in the jungle. You have heard stories of treasure hidden within its walls, but also of deadly traps and curses that protect it. Will you brave the temple's dangers in search of riches, or turn back before it's too late?",
+    "actions": {
+        "torch": "Take the TORCH",
+        "sword": "Take the SWORD",
+        "enter": "ENTER the temple",
+        "walk": "WALK down the corridor",
+        "look": "LOOK for traps",
+        "continue": "CONTINUE down the corridor",
+        "approach": "APPROACH the jewel",
+        "open": "OPEN a chest",
+        "light": "Use the torch to LIGHT the pit",
+        "climb": "Use the sword to CLIMB out.",
+        "back": "Turn BACK"
+    },
+    "prompt": "What will you do?",
+    "story": {
+        "takeTorch": "You take the torch and light it with a match. The flickering flame casts eerie shadows on the temple walls.",
+        "takeSword": "You take the sword and strap it to your belt. The weight of the blade gives you a sense of security.",
+        "seeCorridor": "You take a deep breath and step into the temple. The door creaks shut behind you, leaving you in total darkness. You raise your torch and see a long, narrow corridor stretching out before you.",
+        "avoidTrap": "You carefully examine the floor and walls for any signs of traps. You spot a pressure plate near the end of the corridor and carefully step over it.",
+        "reachRoom": "You slowly make your way through the maze, avoiding traps until you come to a large room. In the center of the room is a pedestal with a glimmering jewel on top. You also see several chests lining the walls.",
+        "fallDown": "As you approach the jewel, you hear a loud noise. Suddenly, the floor beneath you gives way, and you fall into a pit.",
+        "climbOut": "You use the sword to climb out of the pit and back into the room.",
+        "goldCoins": "You open one of the chests and find a bag of gold coins. You smile to yourself, realizing that your adventure has been a success."
+    },
+    "end": "THE END",
+    "endings": {
+        "congratulations": "Congratulations, you have successfully completed the Lost Temple Adventure!",
+        "holeClosed": "You hold the torch higher, trying to illuminate the pit to find a way out. You walk deeper into this new level of the temple for a few minutes before hearing a distant grating noise. You realize that the hole you fell through has closed off behind you. There is no exit.",
+        "becomeTrapped": "You walk down the corridor, your focus on the decorative walls and ceilings. You hear a click as you step onto a pressure plate. The floor drops out from under you as you fall into a trap. You have no way out.",
+        "claustrophobic": "Suddenly feeling claustrophobic, you walk back down the corridor, your focus on the decorative walls and ceilings. You feel a click as you step onto that pressure plate that you so carefully avoided earlier. The floor drops out from under you as you fall into a trap. You have no way out.",
+        "neatSword": "You turn back, taking the sword with you. What a neat souvenir, even if it might be cursed.",
+        "curseBlind": "You approach the jewel again, but this time you're more careful. You reach out and grab the jewel, feeling the effects of a curse blind you.",
+        "hole": "As you approach the jewel, you hear a loud click. Suddenly, the floor beneath you gives way, and you fall into a pit. You have no way out.",
+        "swordNoLight": "You take a deep breath and step into the temple. The door creaks shut behind you, leaving you in total darkness. You realize that without light, the sword might be just as dangerous to yourself as anything else. You slowly wander further into the temple, holding the sword out in front of you to prevent you from running into something. Suddenly, the sword scrapes against the wall. You have hit a dead end, and without light, you won't be able to find your way through this maze.",
+        "noLight": "You take a deep breath and step into the temple. The door creaks shut behind you, leaving you in total darkness. You realize how ill-prepared you are and try to open the door again. It won't budge. You walk further into the temple in darkness, feeling along the walls. You feel a click as you step onto a pressure plate. The floor drops out from under you as you fall into a trap. You have no way out.",
+        "nothingVentured": "You turn back, leaving the temple undisturbed. Nothing ventured, nothing gained... or lost."
+    },
+    "invalid": "Invalid option, please restart."
 }
