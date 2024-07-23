@@ -37,5 +37,5 @@
         "noLight": "You take a deep breath and step into the temple. The door creaks shut behind you, leaving you in total darkness. You realize how ill-prepared you are and try to open the door again. It won't budge. You walk further into the temple in darkness, feeling along the walls. You feel a click as you step onto a pressure plate. The floor drops out from under you as you fall into a trap. You have no way out.",
         "nothingVentured": "You turn back, leaving the temple undisturbed. Nothing ventured, nothing gained... or lost."
     },
-    "invalid": "Invalid option, please restart."
+    "invalid": "Invalid option, please try again."
 }
