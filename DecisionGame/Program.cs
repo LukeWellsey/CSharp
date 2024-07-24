@@ -4,6 +4,7 @@ class DecisionGame {
     static void Main() {
         var jsonData = File.ReadAllText("game_text.json");
         var data = JObject.Parse(jsonData);
+        bool hasSword = false;
 
         Console.WriteLine(data["intro"]);
         string decision = GetUserPrompt(["torch","sword","enter","back"], data);
@@ -11,57 +12,51 @@ class DecisionGame {
             ReadOutput(data, "story", "takeTorch");
             decision = GetUserPrompt(["sword","enter","back"], data);
             if (decision == "sword" || decision == "enter") {
-                //var is true if decision was "sword"
-                bool hasSword = decision == "sword";
-                ReadOutput(data, "story", "takeSword");
-                decision = GetUserPrompt(["enter","back"], data);
-                if (decision == "enter") {
-                    ReadOutput(data, "story", "seeCorridor");
-                    decision = GetUserPrompt(["walk","look"], data);
-                    if (decision == "walk") {
-                        ReadOutput (data, "endings", "becomeTrapped");
-                    } else if (decision == "look") {
-                        ReadOutput(data, "story", "avoidTrap");
-                        decision = GetUserPrompt(["continue","back"], data);
-                        if (decision == "continue") {
-                            ReadOutput(data, "story", "reachRoom");
-                            decision = GetUserPrompt(["approach","open"], data);
-                            if (decision == "approach") {
-                                ReadOutput(data, "story", "fallDown");
-                            } else if (decision == "open") {
-                                ReadOutput(data, "story", "fallDownChest");
-                            }
-                            if(hasSword) {
-                                decision = GetUserPrompt(["light","climb"], data);
-                                if (decision == "light") {
-                                    ReadOutput(data, "story", "holeClosed");
-                                    ReadOutput(data, "misc", "end");
-                                } else if (decision == "climb") {
-                                    ReadOutput(data, "story", "climbOut");
-                                    decision = GetUserPrompt(["approach","open"], data);
-                                    if (decision == "approach") {
-                                        ReadOutput(data, "endings", "curseBlind");
-                                        ReadOutput(data, "misc", "end");
-                                    } else if (decision == "open") {
-                                        ReadOutput(data, "story", "goldCoins");
-                                        ReadOutput(data, "endings", "congratulations");
-                                    }                              
-                                }
-                            } else {
-                                ReadOutput(data, "endings", "hole");
+                if (decision == "sword") {
+                    hasSword = true;
+                    ReadOutput(data, "story", "takeSword");
+                }
+                ReadOutput(data, "story", "seeCorridor");
+                decision = GetUserPrompt(["walk","look"], data);
+                if (decision == "walk") {
+                    ReadOutput (data, "endings", "becomeTrapped");
+                } else if (decision == "look") {
+                    ReadOutput(data, "story", "avoidTrap");
+                    decision = GetUserPrompt(["continue","back"], data);
+                    if (decision == "continue") {
+                        ReadOutput(data, "story", "reachRoom");
+                        decision = GetUserPrompt(["approach","open"], data);
+                        if (decision == "approach") {
+                            ReadOutput(data, "story", "fallDown");
+                        } else if (decision == "open") {
+                            ReadOutput(data, "story", "fallDownChest");
+                        }
+                        if(hasSword) {
+                            decision = GetUserPrompt(["light","climb"], data);
+                            if (decision == "light") {
+                                ReadOutput(data, "story", "holeClosed");
                                 ReadOutput(data, "misc", "end");
+                            } else if (decision == "climb") {
+                                ReadOutput(data, "story", "climbOut");
+                                decision = GetUserPrompt(["approach","open"], data);
+                                if (decision == "approach") {
+                                    ReadOutput(data, "endings", "curseBlind");
+                                    ReadOutput(data, "misc", "end");
+                                } else if (decision == "open") {
+                                    ReadOutput(data, "story", "goldCoins");
+                                    ReadOutput(data, "endings", "congratulations");
+                                }                              
                             }
-                        } else if (decision == "back") {
-                            ReadOutput(data, "endings", "claustrophobic");
+                        } else {
                             ReadOutput(data, "misc", "end");
                         }
+                    } else if (decision == "back") {
+                        ReadOutput(data, "endings", "claustrophobic");
+                        ReadOutput(data, "misc", "end");
                     }
-                } else if (decision == "back") {
-                    ReadOutput (data, "endings", "neatSword");
                 }
-
             } else if (decision == "back") {
-                ReadOutput (data, "endings", "neatSword");
+                ReadOutput (data, "endings", "nothingVentured");
             }
         } else if (decision == "sword") {
             ReadOutput(data, "endings", "swordNoLight");
