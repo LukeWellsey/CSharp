@@ -19,4 +19,5 @@ I used the default System library to provide console output and collect user inp
 # Future Work
 
 - Id like to add data validation for the data in the JSON file to ensure null values are better handled on the off chance those are an issue.
+- fixing the warnings about potential null references would be nice to complete.
 - Id be interested to expand the gameplay and explore how additional factors like player health or other mechanics might complicate or further change the code.
