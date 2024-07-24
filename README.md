@@ -19,4 +19,4 @@ I used the default System library to provide console output and collect user inp
 # Future Work
 
 - Id like to add data validation for the data in the JSON file to ensure null values are better handled on the off chance those are an issue.
-- logic needs fixed surrounding the beginning of the game if the sword is not selected, wrong prompt shows and causes a need to restructure the code, but this doesn't break the game.
+- Id be interested to expand the gameplay and explore how additional factors like player health or other mechanics might complicate or further change the code.
